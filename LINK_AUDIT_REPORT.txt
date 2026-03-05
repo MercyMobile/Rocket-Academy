@@ -1,0 +1,52 @@
+================================================================================
+ROCKETRY ACADEMY LINK AUDIT REPORT
+================================================================================
+Date: March 5, 2026
+Scope: RocketryAcademy.html, README.md, and all .txt guides in project root
+
+METHOD
+------
+1) Extracted all HTTP/HTTPS URLs from project files.
+2) Verified standard URLs with HTTP status checks (HEAD, fallback GET).
+3) Verified YouTube video links using YouTube oEmbed endpoint.
+4) Updated broken links and re-ran full audit.
+
+RESULT
+------
+- Total unique literal URLs scanned: 14
+- Verified reachable URLs: 14
+
+VERIFIED URLS (CURRENT)
+-----------------------
+- https://www.nasa.gov/learning-resources/
+- https://www.nasa.gov/learning-resources/for-kids-and-students/
+- https://www.nar.org/
+- https://www.apogeerockets.com/education/downloads/Newsletter457.pdf
+
+YouTube (oEmbed verified):
+- https://www.youtube.com/watch?v=-luKN6mad5w
+- https://www.youtube.com/watch?v=5bO8dpPuG4E
+- https://www.youtube.com/watch?v=DagcRXK8bkM
+- https://www.youtube.com/watch?v=GXZEw7m-kIc
+- https://www.youtube.com/watch?v=Lfm3nW1hHHs
+- https://www.youtube.com/watch?v=YNAEdNd_brs
+- https://www.youtube.com/watch?v=aTd2f59TSVo
+- https://www.youtube.com/watch?v=kucMatSuMWU
+- https://www.youtube.com/watch?v=zctTKdQcmVA
+
+INTERACTIVITY + BEST PRACTICES APPLIED
+--------------------------------------
+- Video playback now opens direct YouTube watch pages in new tab
+  (avoids iframe embed errors like Error 153).
+- Added blocked-popup fallback with a manual clickable link.
+- Added noopener/noreferrer on external links.
+- Added mission week boundary guard to prevent invalid navigation.
+- Improved keyboard accessibility by rendering featured video items as buttons.
+- Fixed activity completion persistence to localStorage.
+
+NOTE
+----
+If YouTube or popups are unavailable in a browser session, links can still be
+opened manually using the fallback link shown in the app.
+
+================================================================================

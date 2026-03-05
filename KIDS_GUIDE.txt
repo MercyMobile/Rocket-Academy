@@ -1,0 +1,187 @@
+================================================================================
+              🚀 WARRIORS ROCKET ADVENTURE
+                 KID'S QUICK START GUIDE
+================================================================================
+
+Hey there, future rocket scientist! 👋
+
+Ready to become a certified rocket pilot? Let's get started!
+
+================================================================================
+                         STEP 1: LAUNCH THE APP
+================================================================================
+
+Find the file called "LAUNCH_ACADEMY.bat" and DOUBLE-CLICK it!
+
+OR
+
+Open "RocketryAcademy.html" in your web browser (Chrome, Firefox, or Edge).
+
+================================================================================
+                         STEP 2: CHOOSE YOUR PILOT
+================================================================================
+
+You'll see 4 awesome avatars. Click on the one that looks most like you:
+
+  🟦 ZANDER  - Blue theme (cool and calm!)
+  🟩 ZEKE    - Green theme (nature lover!)
+  🟪 OBI     - Purple theme (creative genius!)
+  🟧 JEDI    - Orange theme (bold adventurer!)
+
+Then click "Begin Training" - and you're in!
+
+================================================================================
+                    STEP 3: YOUR FIRST MISSION
+================================================================================
+
+You'll see 9 mission cards. Start with WEEK 1 (it's the top-left one).
+
+Click on it, and you'll see:
+
+  📚 LESSON - Read the cool rocket facts!
+  ✅ ACTIVITIES - Click each one as you do it
+  ⏱️  TIMER - Counts how long you're spending
+  📝 QUIZ - Test your knowledge (need 80% to pass!)
+  ✏️  JOURNAL - Write your thoughts
+
+================================================================================
+                    IMPORTANT RULES TO REMEMBER
+================================================================================
+
+⏱️  SPEND AT LEAST 60 MINUTES
+   The timer will warn you if you try to finish too fast!
+   Real learning takes time!
+
+✅  COMPLETE ALL ACTIVITIES
+   Click each activity when you finish it.
+   They turn green when done!
+
+📝  WRITE IN YOUR JOURNAL
+   There's no wrong answer! Just share your thoughts.
+   It saves automatically!
+
+📋  PASS THE QUIZ
+   You need 80% (that's 4 out of 5 correct).
+   If you don't pass, you can try again!
+
+================================================================================
+                         WEEKLY CHECKLIST
+================================================================================
+
+Each week, do this:
+
+□ 1. Read the lesson content
+□ 2. Do ALL the hands-on activities
+□ 3. Check off each activity as you finish
+□ 4. Watch the timer (at least 60 minutes!)
+□ 5. Write in your reflection journal
+□ 6. Take the quiz (get 80% or higher)
+□ 7. Click "Complete Mission"
+□ 8. Move to the next week!
+
+================================================================================
+                    COACH CISCO'S SAFETY TIPS
+================================================================================
+
+Your instructor Coach Cisco always says:
+
+  🛡️  "Safety first, fun second, rockets third!"
+
+This means:
+  - Always wear eye protection during launches
+  - Never point rockets at people
+  - Wait for the "All Clear" before retrieving
+  - Ask an adult for help with real rockets!
+
+================================================================================
+                         SPECIAL WEEKS
+================================================================================
+
+🏆  WEEK 5 - DESIGN CHALLENGE
+   You choose: Distance OR Altitude specialist!
+   Build the best rocket you can!
+
+🔬  WEEK 7 - THE BIG BUILD
+   You're building a REAL model rocket!
+   Take your time and be precise!
+
+⚠️  WEEK 8 - SAFETY QUIZ
+   Must pass before you can launch!
+   This is super important!
+
+🚀  WEEK 9 - FINAL EXAM
+   Complete the pre-flight checklist
+   Launch your rocket!
+   EARN YOUR CERTIFICATE!
+
+================================================================================
+                       YOUR CERTIFICATE!
+================================================================================
+
+When you finish Week 9, something magical happens...
+
+✨  A CERTIFICATE appears with YOUR NAME on it! ✨
+
+It proves you're a certified Junior Rocket Pilot!
+You can print it and hang it on your wall!
+
+================================================================================
+                    PARENT DASHBOARD (FOR ADULTS)
+================================================================================
+
+Grown-ups can see your progress by clicking "Coach Dashboard":
+  - How many weeks you've finished
+  - How much time you spent
+  - Your quiz scores
+  - Everything you've learned!
+
+================================================================================
+                         TROUBLE?
+================================================================================
+
+If something doesn't work:
+
+❓ "My avatar won't load!"
+   → Refresh the page and relaunch the app
+
+❓ "My progress disappeared!"
+   → Did you clear your browser history? Don't do that!
+   → Make sure you're using the same browser
+
+❓ "The quiz won't let me pass!"
+   → You need 80% (4 out of 5 correct)
+   → Read the questions carefully!
+
+❓ "I can't complete Week 9!"
+   → Did you check all 8 items on the pre-flight checklist?
+   → All must be checked before you can launch!
+
+================================================================================
+                         FUN FACTS
+================================================================================
+
+Did you know?
+
+🌟 Sir Isaac Newton discovered gravity from watching an apple fall
+🌟 Real rockets use the same principles as your straw rockets
+🌟 NASA astronauts train for years to do what you're learning
+🌟 The fastest rocket ever went over 5,000 mph!
+🌟 You're now part of a long line of rocket pioneers!
+
+================================================================================
+                       READY TO BEGIN?
+================================================================================
+
+Double-click "LAUNCH_ACADEMY.bat" and let's launch!
+
+Remember, Commander:
+
+  "The sky is not the limit - it's just the beginning!"
+
+See you at the launch pad! 🚀
+
+- Coach Cisco & Your Pilot Friends (Zander, Zeke, Obi, Jedi)
+
+================================================================================
+                NOW GO BUILD SOME AWESOME ROCKETS! 🚀
+================================================================================
