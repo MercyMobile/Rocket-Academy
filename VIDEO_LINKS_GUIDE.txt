@@ -38,18 +38,22 @@ WEEK 3: Balloon Rockets
 
 WEEK 4: Stomp Rockets
 ---------------------
-🎥 "Build a Stomp Rocket Launcher"
+🎥 "DIY Space: Stomp Rockets (Part 1 - Build)"
    → https://www.youtube.com/watch?v=5bO8dpPuG4E
-   Duration: 6:12 | Source: YouTube
+   Duration: Part 1 | Source: NASAJPL Edu
+
+🎥 "DIY Space: Stomp Rockets (Part 2 - Launch and Measure)"
+   → https://www.youtube.com/watch?v=iUmkj5XHOaw
+   Duration: Part 2 | Source: NASAJPL Edu
    
 📖 NASA: Air Pressure and Flight
    → https://www.nasa.gov/learning-resources/for-kids-and-students/
 
 WEEK 6: Model Theory
 --------------------
-🎥 "How Model Rockets Work"
+🎥 "How a Rocket Works"
    → https://www.youtube.com/watch?v=GXZEw7m-kIc
-   Duration: 8:15 | Source: YouTube
+   Duration: How-To | Source: Estes Rockets
    
 📖 NASA: Rocket Stability
    → https://www.nasa.gov/learning-resources/for-kids-and-students/
@@ -59,34 +63,38 @@ WEEK 6: Model Theory
 
 WEEK 7: The Big Build
 ---------------------
-🎥 "Building Your First Model Rocket"
-   → https://www.youtube.com/watch?v=YNAEdNd_brs
-   Duration: 12:30 | Source: YouTube
+🎥 "How To: Build a Rocket"
+   → https://www.youtube.com/watch?v=IwbsxL6LexQ
+   Duration: How-To | Source: Estes Education
    
 📖 Rocket Building Tips (PDF)
    → https://www.apogeerockets.com/education/downloads/Newsletter457.pdf
 
 WEEK 8: Countdown Rehearsal
 ---------------------------
-🎥 "Rocket Recovery Best Practices"
-   → https://www.youtube.com/watch?v=DagcRXK8bkM
-   Duration: 7:45 | Source: YouTube
+🎥 "Two Methods of Folding A Parachute"
+   → https://www.youtube.com/watch?v=N5l_SST5t8M
+   Duration: How-To | Source: Apogee Components
    
 📖 NAR Safety Code
    → https://www.nar.org/
 
 WEEK 9: The Launch Exam
 -----------------------
-🎥 "How to Launch Model Rockets Safely"
+🎥 "How To: Fly Safely"
    → https://www.youtube.com/watch?v=Lfm3nW1hHHs
-   Duration: 9:20 | Source: YouTube
+   Duration: Safety | Source: Estes Education
+
+🎥 "Model Rocket Safety with Astronaut Bob Behnken"
+   → https://www.youtube.com/watch?v=jhrqZVCy4C4
+   Duration: Safety | Source: Estes Education
    
 📖 NASA Launch Procedures
    → https://www.nasa.gov/learning-resources/for-kids-and-students/
 
-🎥 "Real Rocket Launch Footage"
-   → https://www.youtube.com/watch?v=zctTKdQcmVA
-   Duration: 4:30 | Source: YouTube
+🎥 "NASA Artemis I Launch Highlights"
+   → https://www.youtube.com/watch?v=jrDv0OdMt5s
+   Duration: Highlights | Source: NASA
 
 ================================================================================
                               HOW IT WORKS
