@@ -508,6 +508,11 @@
       text-transform: uppercase;
       letter-spacing: 0.1em;
       font-size: 0.75rem;
+      padding: 0.5rem 0.25rem;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .nav-btn:hover,
@@ -722,7 +727,7 @@
     }
 
     .main-content {
-      grid-column: span 2;
+      grid-column: span 1;
     }
 
     @media (min-width: 1024px) {
@@ -1212,6 +1217,8 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
+      min-height: 44px;
+      touch-action: manipulation;
     }
 
     .btn-primary {
@@ -1269,6 +1276,12 @@
       color: white;
       cursor: pointer;
       transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 44px;
+      min-height: 44px;
+      touch-action: manipulation;
     }
 
     .btn-icon:hover {
@@ -1278,6 +1291,23 @@
     .btn-icon:disabled {
       opacity: 0.3;
       cursor: not-allowed;
+    }
+
+    .mission-card,
+    .student-option,
+    .activity-item,
+    .checklist-item,
+    .quiz-option,
+    .nav-btn,
+    .video-close-btn,
+    .cert-close-btn {
+      touch-action: manipulation;
+    }
+
+    .video-close-btn,
+    .cert-close-btn {
+      min-width: 44px;
+      min-height: 44px;
     }
 
     /* ===== REFLECTION ===== */
@@ -1547,8 +1577,16 @@
       color: var(--slate-400);
     }
 
+    .history-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: 1rem;
+    }
+
     .history-table {
       width: 100%;
+      min-width: 42rem;
       border-collapse: collapse;
       background: var(--slate-900);
       border-radius: 1rem;
@@ -1820,6 +1858,178 @@
       height: 100%;
       border: 0;
     }
+
+    /* ===== RESPONSIVE TUNING ===== */
+    @media (max-width: 1023px) {
+      .mission-detail-grid {
+        gap: 1.5rem;
+      }
+
+      .main-content {
+        grid-column: span 1;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .header {
+        padding: 0.75rem;
+      }
+
+      .header-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+      }
+
+      .logo-section {
+        justify-content: center;
+      }
+
+      .logo-text h1,
+      .logo-text p {
+        text-align: center;
+      }
+
+      .logo-text h1 {
+        font-size: 1rem;
+      }
+
+      .nav-section {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+      }
+
+      .rank-badge {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .dashboard-hero h2 {
+        font-size: 1.75rem;
+      }
+
+      .mission-card {
+        padding: 1rem;
+      }
+
+      .mission-panel-header,
+      .mission-panel-body,
+      .coach-card,
+      .engineering-card,
+      .timer-card {
+        padding: 1rem;
+      }
+
+      .mission-panel-title {
+        font-size: 1.5rem;
+      }
+
+      .content-text {
+        font-size: 1rem;
+      }
+
+      .timer-display {
+        font-size: 2rem;
+      }
+
+      .quiz-score-value {
+        font-size: 2.25rem;
+      }
+
+      .history-table th,
+      .history-table td {
+        white-space: nowrap;
+        padding: 0.75rem;
+      }
+
+      .student-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .student-select-content {
+        padding: 1.25rem;
+        max-height: calc(100vh - 2rem);
+        overflow-y: auto;
+      }
+
+      .student-avatar {
+        width: 4.5rem;
+        height: 4.5rem;
+      }
+
+      .certificate-content {
+        padding: 1.5rem;
+        max-height: calc(100vh - 2rem);
+        overflow-y: auto;
+      }
+
+      .certificate-title {
+        font-size: 1.75rem;
+      }
+
+      .certificate-name {
+        font-size: 1.4rem;
+      }
+
+      .mission-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+      }
+
+      .mission-nav-buttons {
+        width: 100%;
+        justify-content: stretch;
+      }
+
+      .mission-nav-buttons .btn-icon {
+        flex: 1;
+      }
+
+      .footer-content {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .footer-badges {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+      }
+
+      .video-modal {
+        padding: 0.5rem;
+      }
+
+      .video-modal-content {
+        max-height: calc(100vh - 1rem);
+      }
+    }
+
+    @media (max-width: 479px) {
+      .progress-text {
+        font-size: 0.55rem;
+      }
+
+      .dashboard-hero h2 {
+        font-size: 1.5rem;
+      }
+
+      .mission-panel-title {
+        font-size: 1.25rem;
+      }
+
+      .certificate-title {
+        font-size: 1.5rem;
+      }
+
+      .certificate-name {
+        font-size: 1.2rem;
+        padding: 0.75rem;
+      }
+    }
   </style>
 </head>
 
@@ -1942,18 +2152,20 @@
           <h2 class="mission-panel-title">Training History</h2>
         </div>
         <div class="mission-panel-body" style="padding: 0;">
-          <table class="history-table">
-            <thead>
-              <tr>
-                <th>Week</th>
-                <th>Title</th>
-                <th>Time Spent</th>
-                <th>Quiz Score</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody id="historyTableBody"></tbody>
-          </table>
+          <div class="history-table-wrap">
+            <table class="history-table">
+              <thead>
+                <tr>
+                  <th>Week</th>
+                  <th>Title</th>
+                  <th>Time Spent</th>
+                  <th>Quiz Score</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="historyTableBody"></tbody>
+            </table>
+          </div>
         </div>
       </div>
 
@@ -2476,7 +2688,7 @@ GOOD LUCK, COMMANDER! The sky is not the limit - it's just the beginning.`,
             <p style="color: var(--slate-400);">Complete all 9 weeks of flight training to earn your Junior Rocketry Wings, ${studentData.name}! Safety is our primary mission objective.</p>
           </div>
 
-          <div class="mission-grid" style="display: grid; grid-template-columns: repeat(1, 1fr); gap: 1.5rem; padding-bottom: 2rem;">
+          <div class="mission-grid">
             ${MISSIONS.map(m => {
         const isCompleted = completedWeeks.includes(m.week);
         return `
@@ -2513,8 +2725,8 @@ GOOD LUCK, COMMANDER! The sky is not the limit - it's just the beginning.`,
             Back to Dashboard
           </button>
 
-          <div class="mission-detail-grid" style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
-            <div style="grid-column: span 2;">
+          <div class="mission-detail-grid">
+            <div class="main-content">
               <div class="mission-panel">
                 <div class="mission-panel-header">
                   <span class="mission-badge">Week ${mission.week}</span>
@@ -2617,11 +2829,11 @@ GOOD LUCK, COMMANDER! The sky is not the limit - it's just the beginning.`,
                     `}
                   </section>
 
-                  <div class="flex justify-between items-center pt-6" style="margin-top: 2rem; border-top: 1px solid var(--slate-800);">
+                  <div class="flex justify-between items-center pt-6 mission-actions" style="margin-top: 2rem; border-top: 1px solid var(--slate-800);">
                     <button class="btn ${isWeekCompleted ? 'btn-success' : 'btn-primary'}" onclick="toggleWeekComplete()" ${!quizPassed || timerSeconds < 3600 ? 'disabled' : ''} style="${!quizPassed || timerSeconds < 3600 ? 'opacity: 0.5;' : ''}">
                       ${isWeekCompleted ? '✓ Mission Completed' : 'Complete Mission'}
                     </button>
-                    <div class="flex gap-2">
+                    <div class="flex gap-2 mission-nav-buttons">
                       <button class="btn-icon" onclick="showMission(${currentWeek - 1})" ${currentWeek <= 1 ? 'disabled' : ''}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
                       <button class="btn-icon" onclick="showMission(${currentWeek + 1})" ${currentWeek >= 9 ? 'disabled' : ''}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
                     </div>
