@@ -2069,6 +2069,20 @@
           </div>
           <span class="student-option-name">Jedi</span>
         </div>
+
+        <div class="student-option" data-student="mari" onclick="selectStudent('mari')">
+          <div class="student-avatar">
+            <img src="assets/avatars/mari.png" alt="Mari" onerror="this.style.display='none';this.parentElement.textContent='M';this.parentElement.style.display='flex';this.parentElement.style.alignItems='center';this.parentElement.style.justifyContent='center';this.parentElement.style.fontWeight='900';">
+          </div>
+          <span class="student-option-name">Mari</span>
+        </div>
+
+        <div class="student-option" data-student="karlee" onclick="selectStudent('karlee')">
+          <div class="student-avatar">
+            <img src="assets/avatars/karlee.png" alt="Karlee" onerror="this.style.display='none';this.parentElement.textContent='K';this.parentElement.style.display='flex';this.parentElement.style.alignItems='center';this.parentElement.style.justifyContent='center';this.parentElement.style.fontWeight='900';">
+          </div>
+          <span class="student-option-name">Karlee</span>
+        </div>
       </div>
 
       <button class="btn btn-primary btn-block" onclick="confirmStudent()" id="confirmStudentBtn" disabled>
@@ -2257,7 +2271,9 @@
       zander: { name: 'Zander', avatar: 'assets/avatars/zander.png', color: 'from-blue-500 to-cyan-500' },
       zeke: { name: 'Zeke', avatar: 'assets/avatars/zeke.png', color: 'from-green-500 to-emerald-500' },
       obi: { name: 'Obi', avatar: 'assets/avatars/obi.png', color: 'from-purple-500 to-violet-500' },
-      jedi: { name: 'Jedi', avatar: 'assets/avatars/Jedi.png', color: 'from-orange-500 to-amber-500' }
+      jedi: { name: 'Jedi', avatar: 'assets/avatars/Jedi.png', color: 'from-orange-500 to-amber-500' },
+      mari: { name: 'Mari', avatar: 'assets/avatars/mari.png', color: 'from-teal-500 to-cyan-500' },
+      karlee: { name: 'Karlee', avatar: 'assets/avatars/karlee.png', color: 'from-sky-500 to-blue-500' }
     };
 
     const COACH = {
