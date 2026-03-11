@@ -750,6 +750,46 @@
       background: linear-gradient(to right, rgba(37, 99, 235, 0.2), transparent);
     }
 
+    .mission-header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .lesson-student-avatar-btn {
+      border: 2px solid rgba(59, 130, 246, 0.35);
+      background: rgba(15, 23, 42, 0.75);
+      border-radius: 9999px;
+      width: 3.5rem;
+      height: 3.5rem;
+      padding: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.15s ease, border-color 0.2s ease;
+      touch-action: manipulation;
+    }
+
+    .lesson-student-avatar-btn:hover {
+      border-color: var(--blue-400);
+      transform: translateY(-1px);
+    }
+
+    .lesson-student-avatar-btn:active {
+      transform: scale(0.96);
+    }
+
+    .lesson-student-avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+    }
+
     .mission-badge {
       display: inline-flex;
       align-items: center;
@@ -1454,6 +1494,7 @@
       justify-content: center;
       z-index: 100;
       padding: 1rem;
+      overflow-y: auto;
     }
 
     .student-select-content {
@@ -1463,6 +1504,8 @@
       padding: 2rem;
       max-width: 40rem;
       width: 100%;
+      max-height: calc(100vh - 2rem);
+      overflow-y: auto;
     }
 
     .student-launch-logo {
@@ -1493,6 +1536,12 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
       margin-bottom: 1.5rem;
+    }
+
+    #confirmStudentBtn {
+      position: sticky;
+      bottom: 0;
+      z-index: 2;
     }
 
     .student-option {
@@ -1924,6 +1973,15 @@
 
       .mission-panel-title {
         font-size: 1.5rem;
+      }
+
+      .mission-header-top {
+        align-items: flex-start;
+      }
+
+      .lesson-student-avatar-btn {
+        width: 3rem;
+        height: 3rem;
       }
 
       .content-text {
@@ -2621,6 +2679,8 @@ GOOD LUCK, COMMANDER! The sky is not the limit - it's just the beginning.`,
     let activityCompletions = {};
     let preFlightChecks = {};
     let reflectionText = '';
+    let lessonAvatarTapCount = 0;
+    let lessonAvatarTapResetTimer = null;
 
     // === PERSISTENCE ===
     function getProgress() {
@@ -2655,6 +2715,7 @@ GOOD LUCK, COMMANDER! The sky is not the limit - it's just the beginning.`,
     // === NAVIGATION ===
     function showDashboard() {
       currentView = 'dashboard';
+      resetLessonAvatarEasterEgg();
       renderDashboard();
     }
 
@@ -2664,6 +2725,7 @@ GOOD LUCK, COMMANDER! The sky is not the limit - it's just the beginning.`,
       if (!Number.isInteger(week) || week < 1 || week > MISSIONS.length) return;
       currentWeek = week;
       currentView = 'mission';
+      resetLessonAvatarEasterEgg();
       renderMissionDetail();
       startTimer();
     }
@@ -2671,12 +2733,14 @@ GOOD LUCK, COMMANDER! The sky is not the limit - it's just the beginning.`,
     function showParentDashboard() {
       document.getElementById('mainApp').classList.add('hidden');
       document.getElementById('parentDashboard').classList.remove('hidden');
+      resetLessonAvatarEasterEgg();
       renderParentStats();
     }
 
     function showStudentView() {
       document.getElementById('parentDashboard').classList.add('hidden');
       document.getElementById('mainApp').classList.remove('hidden');
+      resetLessonAvatarEasterEgg();
       showDashboard();
     }
 
@@ -2733,6 +2797,7 @@ GOOD LUCK, COMMANDER! The sky is not the limit - it's just the beginning.`,
       const quizScore = progress.quizScores[currentWeek];
       const activities = (progress.activityCompletions && progress.activityCompletions[currentWeek]) || {};
       const quizPassed = quizScore >= 80;
+      const studentData = STUDENTS[currentStudent] || { name: 'Cadet', avatar: '' };
 
       let html = `
         <div class="animate-in" style="max-width: 72rem; margin: 0 auto; padding: 1rem;">
@@ -2745,7 +2810,12 @@ GOOD LUCK, COMMANDER! The sky is not the limit - it's just the beginning.`,
             <div class="main-content">
               <div class="mission-panel">
                 <div class="mission-panel-header">
-                  <span class="mission-badge">Week ${mission.week}</span>
+                  <div class="mission-header-top">
+                    <span class="mission-badge">Week ${mission.week}</span>
+                    <button type="button" class="lesson-student-avatar-btn" onclick="handleLessonAvatarClick()" aria-label="${studentData.name} avatar">
+                      <img class="lesson-student-avatar" src="${studentData.avatar || ''}" alt="${studentData.name}" onerror="this.style.display='none';">
+                    </button>
+                  </div>
                   <h2 class="mission-panel-title">${mission.title}</h2>
                   <p class="mission-panel-objective">${mission.objective}</p>
                 </div>
@@ -3127,8 +3197,37 @@ GOOD LUCK, COMMANDER! The sky is not the limit - it's just the beginning.`,
           localStorage.removeItem('rocketryProgress_' + key);
         });
         alert('All progress has been reset.');
+        resetLessonAvatarEasterEgg();
         showStudentView();
       }
+    }
+
+    function resetLessonAvatarEasterEgg() {
+      lessonAvatarTapCount = 0;
+      if (lessonAvatarTapResetTimer) {
+        clearTimeout(lessonAvatarTapResetTimer);
+        lessonAvatarTapResetTimer = null;
+      }
+    }
+
+    function handleLessonAvatarClick() {
+      if (currentView !== 'mission') return;
+      lessonAvatarTapCount += 1;
+
+      if (lessonAvatarTapResetTimer) {
+        clearTimeout(lessonAvatarTapResetTimer);
+      }
+
+      if (lessonAvatarTapCount >= 7) {
+        resetLessonAvatarEasterEgg();
+        openKidSafeWindow();
+        return;
+      }
+
+      lessonAvatarTapResetTimer = setTimeout(() => {
+        lessonAvatarTapCount = 0;
+        lessonAvatarTapResetTimer = null;
+      }, 10000);
     }
 
     // === SAVE REFLECTION ===
@@ -3206,6 +3305,22 @@ GOOD LUCK, COMMANDER! The sky is not the limit - it's just the beginning.`,
       // If popups are blocked, show a manual clickable fallback.
       if (!popup) {
         showPopupBlockedFallback(watchUrl, title || 'Video');
+      }
+    }
+
+    function openKidSafeWindow() {
+      const targetUrl = 'https://kidsafe.games/';
+      const popupFeatures = 'popup=yes,width=1200,height=800,left=80,top=60,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,noopener,noreferrer';
+      const popup = window.open(targetUrl, 'kidsafe_arcade_window', popupFeatures);
+
+      if (!popup) {
+        showPopupBlockedFallback(targetUrl, 'Kids Safe Games');
+        return;
+      }
+
+      try {
+        popup.focus();
+      } catch (_err) {
       }
     }
 
